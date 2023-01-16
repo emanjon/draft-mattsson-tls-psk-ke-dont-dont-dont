@@ -153,7 +153,7 @@ Table of Contents
 
    *  The general 3GPP TLS 1.2 profile follows [RFC9113] and states:
       "Only cipher suites with AEAD (e.g., GCM) and PFS (e.g.  ECDHE,
-      DHE) shall be supported" [T3GPP.33.210].
+      DHE) shall be supported" [TS.33.210].
 
    *  BoringSSL has chosen to not implement psk_ke, so that TLS 1.3
       resumption always incorporates fresh key material [BoringSSL].
@@ -171,8 +171,8 @@ Table of Contents
    authentication should be not recommended solely based on this
    significant privacy weakness.  The 3GPP radio access network that to
    a large degree relies on PSK are fixing the vulnerabilities by
-   augmenting PSK with ECIES and ECDHE, see Annex C of [T3GPP.33.501]
-   and [I-D.ietf-emu-aka-pfs].
+   augmenting PSK with ECIES and ECDHE, see Annex C of [TS.33.501] and
+   [I-D.ietf-emu-aka-pfs].
 
    Together with ffdhe2048 and rsa_pkcs1, psk_ke is one of the bad
    apples in the standards track TLS 1.3 fruit basket.  Organizations
@@ -537,15 +537,15 @@ Table of Contents
    [Signal]   Signal, "The Double Ratchet Algorithm", November 2016,
               <https://signal.org/docs/specifications/doubleratchet/>.
 
-   [T3GPP.33.210]
+   [TS.33.210]
               3GPP, "TS 33.210 Network Domain Security (NDS); IP network
               layer security", September 2022,
               <https://portal.3gpp.org/desktopmodules/Specifications/
               SpecificationDetails.aspx?specificationId=2279>.
 
-   [T3GPP.33.501]
+   [TS.33.501]
               3GPP, "TS 33.501 Security architecture and procedures for
-              5G System", September 2022,
+              5G System", December 2022,
               <https://portal.3gpp.org/desktopmodules/Specifications/
               SpecificationDetails.aspx?specificationId=3169>.
 
