@@ -1,7 +1,7 @@
 ---
 title: "NULL Encryption and Key Exchange Without Forward Secrecy are Dicouraged"
 abbrev: "NULL and psk_ke don't don't don't"
-category: info
+category: std
 
 docname: draft-mattsson-tls-psk-ke-dont-dont-dont-latest
 submissiontype: IETF  # also: "independent", "IAB", or "IRTF"
