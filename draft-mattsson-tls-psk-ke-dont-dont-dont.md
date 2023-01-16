@@ -19,8 +19,8 @@
 # Change the file extension to match the format (.xml for XML, etc...)
 #
 ###
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
+title: "NULL Encryption and Key Exchange Without Forward Secrecy are Dicouraged"
+abbrev: "NULL and psk_ke don't don't don't"
 category: info
 
 docname: draft-todo-yourname-protocol-latest
