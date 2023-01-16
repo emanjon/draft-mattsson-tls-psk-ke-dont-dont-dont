@@ -189,7 +189,7 @@ informative:
         ins: "Signal"
     date: November 2016
 
-  T3GPP.33.210:
+  TS.33.210:
     target: "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2279"
     title: "TS 33.210 Network Domain Security (NDS); IP network layer security"
     author:
@@ -197,13 +197,13 @@ informative:
         ins: "3GPP"
     date: September 2022
 
-  T3GPP.33.501:
+  TS.33.501:
     target: "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3169"
     title: "TS 33.501 Security architecture and procedures for 5G System"
     author:
       -
         ins: "3GPP"
-    date: September 2022
+    date: December 2022
 
 --- abstract
 
