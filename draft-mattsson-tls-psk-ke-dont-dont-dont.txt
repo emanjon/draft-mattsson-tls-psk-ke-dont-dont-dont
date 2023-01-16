@@ -539,13 +539,13 @@ Table of Contents
 
    [TS.33.210]
               3GPP, "TS 33.210 Network Domain Security (NDS); IP network
-              layer security", September 2022,
+              layer security", 3GPP TS 33.210 17.1.0 , September 2022,
               <https://portal.3gpp.org/desktopmodules/Specifications/
               SpecificationDetails.aspx?specificationId=2279>.
 
    [TS.33.501]
               3GPP, "TS 33.501 Security architecture and procedures for
-              5G System", December 2022,
+              5G System", 3GPP TS 33.501 18.0.0 , December 2022,
               <https://portal.3gpp.org/desktopmodules/Specifications/
               SpecificationDetails.aspx?specificationId=3169>.
 
