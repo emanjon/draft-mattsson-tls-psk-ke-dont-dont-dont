@@ -237,7 +237,7 @@ Unfortunately, TLS 1.3 allows key exchange without forward secrecy in both full 
 
 Together with ffdhe2048 and rsa_pkcs1, psk_ke is one of the bad apples in the standards track TLS 1.3 fruit basket.  Organizations like BSI {{BSI}} has already produced recommendations regarding its deprecation.
 
-- BSI states regarding psk_ke that "This mode should only be used in special applications after consultation of an expert." and has set a deadline that use is only allowed until 2026. 
+- BSI states regarding psk_ke that "This mode should only be used in special applications after consultation of an expert." and has set a deadline that use is only allowed until 2026.
 
 Two essential zero trust principles are to assume that breach is inevitable or has likely already occurred {{NSA-ZT}}, and to minimize impact when breach occur {{NIST-ZT}}. One type of breach is key compromise or key exfiltration. Different types of exfiltration are defined and discussed in {{RFC7624}}. Static exfiltration where the keys are transferred once has a lower risk profile than dynamic exfiltration where keying material or content is transferred to the attacker frequently. Forcing an attacker to do dynamic exfiltration minimizes the impact of breach and should be considered best practice. This significantly increases the risk of discovery for the attacker.
 
@@ -300,7 +300,7 @@ Government organizations like NIST, ANSSI, BSI, and NSA have already produced re
 
 # Signature Algorithms with PKCS #1 v1.5 Padding
 
-Recommendations regarding RSASSA-PKCS1-v1_5 varies. The RSA Cryptography Specifications {{RFC8017}} specifies that "RSASSA-PSS is REQUIRED in new applications. RSASSA-PKCS1-v1_5 is included only for compatibility with existing applications.". BSI {{BSI}} allows use of the PKCS #1 v1.5 padding scheme in TLS certificates up to the year 2025. The Commercial National Security Algorithm (CNSA) {{RFC9151}} requires offer of rsa_pkcs1_sha384 . This document sets the Recommended value of rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 to "N". 
+Recommendations regarding RSASSA-PKCS1-v1_5 varies. The RSA Cryptography Specifications {{RFC8017}} specifies that "RSASSA-PSS is REQUIRED in new applications. RSASSA-PKCS1-v1_5 is included only for compatibility with existing applications.". BSI {{BSI}} allows use of the PKCS #1 v1.5 padding scheme in TLS certificates up to the year 2025. The Commercial National Security Algorithm (CNSA) {{RFC9151}} requires offer of rsa_pkcs1_sha384 . This document sets the Recommended value of rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 to "N".
 
 # IANA Considerations
 
