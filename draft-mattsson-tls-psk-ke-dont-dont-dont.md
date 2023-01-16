@@ -196,6 +196,7 @@ informative:
       -
         ins: "3GPP"
     date: September 2022
+    seriesinfo: 3GPP TS 33.210 17.1.0
 
   TS.33.501:
     target: "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3169"
@@ -204,6 +205,7 @@ informative:
       -
         ins: "3GPP"
     date: December 2022
+    seriesinfo: 3GPP TS 33.501 18.0.0
 
 --- abstract
 
