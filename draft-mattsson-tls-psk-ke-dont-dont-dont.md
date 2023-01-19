@@ -287,7 +287,7 @@ Unfortunately, psk_ke is marked as "Recommended" in the IANA PskKeyExchangeMode 
 
 This document sets the Recommended value of psk_ke to "D" indicating discouraged.
 
-This document sets the Recommended value of all TLS 1.2 cipher suites not using ECDHE to to "D" indicating discouraged.
+{{RFC9113}} describes and classifies prohibited TLS 1.2 cipher suites without forward secrecy. This document sets the "Recommended" value of all cipher suites listed in Appendix A of {{RFC9113}} as well as TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 to "D" indicating that they are "Discouraged".
 
 # Cipher Suites with NULL Encryption
 
@@ -301,12 +301,11 @@ Two essential zero trust principles are to assume that breach is inevitable or h
 
 This document sets the Recommended value of TLS_SHA256_SHA256 and TLS_SHA384_SHA384 to "D" indicating that they are discouraged.
 
-# Diffie-Hellman Groups with Less than 128-bit Security
+# Obsolete Key Exchange
 
-Government organizations like NIST, ANSSI, BSI, and NSA have already produced recommendations regarding the deprecation of key exchange algorithms with less than 128-bit security such as ffdhe2048. NIST {{NIST-Lifetime}} and ANSSI {{ANSSI-TLS}} only allow 2048-bit Finite Field Diffie-Hellman if the application data does not have to be protected after 2030. If the application data had a security life of ten years, NIST and ANSSI allowed use of ffdhe2048 until December 31, 2020. BSI {{BSI}} allowed use of ffdhe2048 up to the year 2022. The Commercial National Security Algorithm Suite (CNSA) {{RFC9151}} forbids the use of ffdhe2048. 
-ECDH groups offer less than 128-bit security are forbidden to use in TLS 1.3
+Government organizations like NIST, ANSSI, BSI, and NSA have already produced recommendations regarding the deprecation of key exchange algorithms with less than 128-bit security such as ffdhe2048. NIST {{NIST-Lifetime}} and ANSSI {{ANSSI-TLS}} only allow 2048-bit Finite Field Diffie-Hellman if the application data does not have to be protected after 2030. If the application data had a security life of ten years, NIST and ANSSI allowed use of ffdhe2048 until December 31, 2020. BSI {{BSI}} allowed use of ffdhe2048 up to the year 2022. The Commercial National Security Algorithm Suite (CNSA) {{RFC9151}} forbids the use of ffdhe2048.  ECDH groups offer less than 128-bit security are forbidden to use in TLS 1.3. This document sets the Recommended value of ffdhe2048, secp160k1, secp160r1, secp160r2, sect163k1, sect163r1, sect163r2, secp192k1, secp192r1, sect193r1, sect193r2, secp224k1, secp224r1m sect233k1, sect233r1, and sect239k1 to "D" indicating that they are discouraged.
 
-This document sets the Recommended value of ffdhe2048, secp160k1, secp160r1, secp160r2, sect163k1, sect163r1, sect163r2, secp192k1, secp192r1, sect193r1, sect193r2, secp224k1, secp224r1m sect233k1, sect233r1, and sect239k1 to "D" indicating that they are discouraged.
+{{I-D.ietf-tls-deprecate-obsolete-kex}} describes and classifies cipher suites with obsolete key exchange methods in TLS 1.2 but does not downgrode the "Recommended" value of the cipher suites. This document sets the "Recommended" value of all cipher suites listed in Appendix A of {{I-D.ietf-tls-deprecate-obsolete-kex}} to "D" indicating that they are "Discouraged".
 
 # Signature Algorithms with PKCS #1 v1.5 Padding or SHA-1
 
