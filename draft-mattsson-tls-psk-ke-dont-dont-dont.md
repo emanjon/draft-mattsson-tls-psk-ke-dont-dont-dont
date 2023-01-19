@@ -313,7 +313,7 @@ IANA is requested to update the TLS Cipher Suites registry under the Transport L
 
 IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For ffdhe2048 the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
 
-IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 the "Recommended" value has been set to "N".
+IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 the "Recommended" value has been set to "N". For rsa_pkcs1_sha1, ecdsa_sha1, rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and rsa_pkcs1_sha512_legacy the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
 
 --- back
 
