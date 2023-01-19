@@ -8,7 +8,7 @@ Intended status: Standards Track                         19 January 2023
 Expires: 23 July 2023
 
 
-NULL Encryption and Key Exchange Without Forward Secrecy are Dicouraged
+NULL Encryption and Key Exchange Without Forward Secrecy are Discouraged
             draft-mattsson-tls-psk-ke-dont-dont-dont-latest
 
 Abstract
@@ -334,7 +334,7 @@ Table of Contents
 
    [I-D.ietf-tls-deprecate-obsolete-kex] describes and classifies cipher
    suites with obsolete key exchange methods in TLS 1.2 but does not
-   downgrode the "Recommended" value.  This document sets the
+   downgrade the "Recommended" value.  This document sets the
    "Recommended" value of all cipher suites listed in Appendix A of
    [I-D.ietf-tls-deprecate-obsolete-kex] to "D" indicating that they are
    "Discouraged".
