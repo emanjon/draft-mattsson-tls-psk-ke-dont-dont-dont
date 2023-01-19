@@ -1167,10 +1167,13 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-tls-pskkeyexchangemode" class="internal xref">TLS PskKeyExchangeMode</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2">
-                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-tls-supported-groups" class="internal xref">TLS Supported Groups</a></p>
+                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-tls-cipher-suites" class="internal xref">TLS Cipher Suites</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.3">
-                <p id="section-toc.1-1.6.2.3.1"><a href="#section-6.3" class="auto internal xref">6.3</a>.  <a href="#name-tls-signaturescheme" class="internal xref">TLS SignatureScheme</a></p>
+                <p id="section-toc.1-1.6.2.3.1"><a href="#section-6.3" class="auto internal xref">6.3</a>.  <a href="#name-tls-supported-groups" class="internal xref">TLS Supported Groups</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.4">
+                <p id="section-toc.1-1.6.2.4.1"><a href="#section-6.4" class="auto internal xref">6.4</a>.  <a href="#name-tls-signaturescheme" class="internal xref">TLS SignatureScheme</a></p>
 </li>
             </ul>
 </li>
@@ -1451,7 +1454,7 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
         <h3 id="name-tls-pskkeyexchangemode">
 <a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-tls-pskkeyexchangemode" class="section-name selfRef">TLS PskKeyExchangeMode</a>
         </h3>
-<p id="section-6.1-1">IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading'. For the following values the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6.1-1" class="pilcrow">¶</a></p>
+<p id="section-6.1-1">IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading'. For the following entry the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6.1-1" class="pilcrow">¶</a></p>
 <table class="center" id="table-1">
           <caption><a href="#table-1" class="selfRef">Table 1</a></caption>
 <thead>
@@ -1469,14 +1472,54 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
         </table>
 </section>
 </div>
-<div id="tls-supported-groups">
+<div id="tls-cipher-suites">
 <section id="section-6.2">
-        <h3 id="name-tls-supported-groups">
-<a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-tls-supported-groups" class="section-name selfRef">TLS Supported Groups</a>
+        <h3 id="name-tls-cipher-suites">
+<a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-tls-cipher-suites" class="section-name selfRef">TLS Cipher Suites</a>
         </h3>
-<p id="section-6.2-1">IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For the following values the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6.2-1" class="pilcrow">¶</a></p>
+<p id="section-6.2-1">IANA is requested to update the TLS Cipher Suites registry under the Transport Layer Security (TLS) Parameters heading.<a href="#section-6.2-1" class="pilcrow">¶</a></p>
+<p id="section-6.2-2">For TLS_SHA256_SHA256 and TLS_SHA384_SHA384 the "Recommended" value has been set to "D" indicating that the items are "Discouraged". For all cipher suites listed in Appendix A of <span>[<a href="#RFC9113" class="cite xref">RFC9113</a>]</span>, all cipher suites listed in Appendix A of <span>[<a href="#I-D.ietf-tls-deprecate-obsolete-kex" class="cite xref">I-D.ietf-tls-deprecate-obsolete-kex</a>]</span>, and the following entries the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6.2-2" class="pilcrow">¶</a></p>
 <table class="center" id="table-2">
           <caption><a href="#table-2" class="selfRef">Table 2</a></caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Desctiption</th>
+              <th class="text-left" rowspan="1" colspan="1">Recommended</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">TLS_SHA256_SHA256</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">TLS_SHA384_SHA384</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">TLS_PSK_DHE_WITH_AES_128_CCM_8</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">TLS_PSK_DHE_WITH_AES_256_CCM_8</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">TLS_PSK_WITH_CHACHA20_POLY1305_SHA256</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+          </tbody>
+        </table>
+</section>
+</div>
+<div id="tls-supported-groups">
+<section id="section-6.3">
+        <h3 id="name-tls-supported-groups">
+<a href="#section-6.3" class="section-number selfRef">6.3. </a><a href="#name-tls-supported-groups" class="section-name selfRef">TLS Supported Groups</a>
+        </h3>
+<p id="section-6.3-1">IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6.3-1" class="pilcrow">¶</a></p>
+<table class="center" id="table-3">
+          <caption><a href="#table-3" class="selfRef">Table 3</a></caption>
 <thead>
             <tr>
               <th class="text-left" rowspan="1" colspan="1">Desctiption</th>
@@ -1544,17 +1587,63 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
               <td class="text-left" rowspan="1" colspan="1">secp224r1</td>
               <td class="text-left" rowspan="1" colspan="1">D</td>
             </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">ffdhe2048</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
           </tbody>
         </table>
 </section>
 </div>
 <div id="tls-signaturescheme">
-<section id="section-6.3">
+<section id="section-6.4">
         <h3 id="name-tls-signaturescheme">
-<a href="#section-6.3" class="section-number selfRef">6.3. </a><a href="#name-tls-signaturescheme" class="section-name selfRef">TLS SignatureScheme</a>
+<a href="#section-6.4" class="section-number selfRef">6.4. </a><a href="#name-tls-signaturescheme" class="section-name selfRef">TLS SignatureScheme</a>
         </h3>
-<p id="section-6.3-1">IANA is requested to update the TLS Cipher Suites registry under the Transport Layer Security (TLS) Parameters heading. For TLS_SHA256_SHA256 and TLS_SHA384_SHA384 the "Recommended" value has been set to "D" indicating that the items are "Discouraged".<a href="#section-6.3-1" class="pilcrow">¶</a></p>
-<p id="section-6.3-2">IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 the "Recommended" value has been set to "N". For rsa_pkcs1_sha1, ecdsa_sha1, rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and rsa_pkcs1_sha512_legacy the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6.3-2" class="pilcrow">¶</a></p>
+<p id="section-6.4-1">IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the the "Recommended" value has been set to "D" indicating that the item is "Discouraged" or to "N".<a href="#section-6.4-1" class="pilcrow">¶</a></p>
+<table class="center" id="table-4">
+          <caption><a href="#table-4" class="selfRef">Table 4</a></caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Desctiption</th>
+              <th class="text-left" rowspan="1" colspan="1">Recommended</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">rsa_pkcs1_sha1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">ecdsa_sha1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">rsa_pkcs1_sha256</td>
+              <td class="text-left" rowspan="1" colspan="1">N</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">rsa_pkcs1_sha256_legacy</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">rsa_pkcs1_sha384</td>
+              <td class="text-left" rowspan="1" colspan="1">N</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">rsa_pkcs1_sha384_legacy</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">rsa_pkcs1_sha512</td>
+              <td class="text-left" rowspan="1" colspan="1">N</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">rsa_pkcs1_sha512_legacy</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+          </tbody>
+        </table>
 </section>
 </div>
 </section>
@@ -1568,6 +1657,10 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 <a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
         </h3>
 <dl class="references">
+<dt id="I-D.ietf-tls-deprecate-obsolete-kex">[I-D.ietf-tls-deprecate-obsolete-kex]</dt>
+        <dd>
+<span class="refAuthor">Bartle, C.</span> and <span class="refAuthor">N. Aviram</span>, <span class="refTitle">"Deprecating Obsolete Key Exchange Methods in TLS"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-tls-deprecate-obsolete-kex-01</span>, <time datetime="2022-12-11" class="refDate">11 December 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-tls-deprecate-obsolete-kex-01">https://datatracker.ietf.org/doc/html/draft-ietf-tls-deprecate-obsolete-kex-01</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="I-D.ietf-tls-rfc8447bis">[I-D.ietf-tls-rfc8447bis]</dt>
         <dd>
 <span class="refAuthor">Salowey, J. A.</span> and <span class="refAuthor">S. Turner</span>, <span class="refTitle">"IANA Registry Updates for TLS and DTLS"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-tls-rfc8447bis-02</span>, <time datetime="2022-10-24" class="refDate">24 October 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-tls-rfc8447bis-02">https://datatracker.ietf.org/doc/html/draft-ietf-tls-rfc8447bis-02</a>&gt;</span>. </dd>
@@ -1583,6 +1676,10 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 <dt id="RFC8446">[RFC8446]</dt>
         <dd>
 <span class="refAuthor">Rescorla, E.</span>, <span class="refTitle">"The Transport Layer Security (TLS) Protocol Version 1.3"</span>, <span class="seriesInfo">RFC 8446</span>, <span class="seriesInfo">DOI 10.17487/RFC8446</span>, <time datetime="2018-08" class="refDate">August 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8446">https://www.rfc-editor.org/rfc/rfc8446</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9113">[RFC9113]</dt>
+        <dd>
+<span class="refAuthor">Thomson, M., Ed.</span> and <span class="refAuthor">C. Benfield, Ed.</span>, <span class="refTitle">"HTTP/2"</span>, <span class="seriesInfo">RFC 9113</span>, <span class="seriesInfo">DOI 10.17487/RFC9113</span>, <time datetime="2022-06" class="refDate">June 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9113">https://www.rfc-editor.org/rfc/rfc9113</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9147">[RFC9147]</dt>
       <dd>
@@ -1694,10 +1791,6 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 <dt id="RFC9001">[RFC9001]</dt>
         <dd>
 <span class="refAuthor">Thomson, M., Ed.</span> and <span class="refAuthor">S. Turner, Ed.</span>, <span class="refTitle">"Using TLS to Secure QUIC"</span>, <span class="seriesInfo">RFC 9001</span>, <span class="seriesInfo">DOI 10.17487/RFC9001</span>, <time datetime="2021-05" class="refDate">May 2021</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9001">https://www.rfc-editor.org/rfc/rfc9001</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC9113">[RFC9113]</dt>
-        <dd>
-<span class="refAuthor">Thomson, M., Ed.</span> and <span class="refAuthor">C. Benfield, Ed.</span>, <span class="refTitle">"HTTP/2"</span>, <span class="seriesInfo">RFC 9113</span>, <span class="seriesInfo">DOI 10.17487/RFC9113</span>, <time datetime="2022-06" class="refDate">June 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9113">https://www.rfc-editor.org/rfc/rfc9113</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9150">[RFC9150]</dt>
         <dd>

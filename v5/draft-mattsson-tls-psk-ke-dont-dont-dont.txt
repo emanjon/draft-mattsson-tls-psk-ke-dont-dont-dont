@@ -89,8 +89,9 @@ Table of Contents
    5.  Signature Algorithms with PKCS #1 v1.5 Padding
    6.  IANA Considerations
      6.1.  TLS PskKeyExchangeMode
-     6.2.  TLS Supported Groups
-     6.3.  TLS SignatureScheme
+     6.2.  TLS Cipher Suites
+     6.3.  TLS Supported Groups
+     6.4.  TLS SignatureScheme
    7.  References
      7.1.  Normative References
      7.2.  Informative References
@@ -337,7 +338,7 @@ Table of Contents
 
    IANA is requested to update the TLS PskKeyExchangeMode registry under
    the Transport Layer Security (TLS) Parameters heading'.  For the
-   following values the the "Recommended" value has been set to "D"
+   following entry the the "Recommended" value has been set to "D"
    indicating that the item is "Discouraged".
 
                        +=============+=============+
@@ -348,11 +349,39 @@ Table of Contents
 
                                   Table 1
 
-6.2.  TLS Supported Groups
+6.2.  TLS Cipher Suites
+
+   IANA is requested to update the TLS Cipher Suites registry under the
+   Transport Layer Security (TLS) Parameters heading.
+
+   For TLS_SHA256_SHA256 and TLS_SHA384_SHA384 the "Recommended" value
+   has been set to "D" indicating that the items are "Discouraged".  For
+   all cipher suites listed in Appendix A of [RFC9113], all cipher
+   suites listed in Appendix A of [I-D.ietf-tls-deprecate-obsolete-kex],
+   and the following entries the "Recommended" value has been set to "D"
+   indicating that the item is "Discouraged".
+
+          +=======================================+=============+
+          | Desctiption                           | Recommended |
+          +=======================================+=============+
+          | TLS_SHA256_SHA256                     | D           |
+          +---------------------------------------+-------------+
+          | TLS_SHA384_SHA384                     | D           |
+          +---------------------------------------+-------------+
+          | TLS_PSK_DHE_WITH_AES_128_CCM_8        | D           |
+          +---------------------------------------+-------------+
+          | TLS_PSK_DHE_WITH_AES_256_CCM_8        | D           |
+          +---------------------------------------+-------------+
+          | TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 | D           |
+          +---------------------------------------+-------------+
+
+                                  Table 2
+
+6.3.  TLS Supported Groups
 
    IANA is requested to update the TLS Supported Groups registry under
    the Transport Layer Security (TLS) Parameters heading.  For the
-   following values the the "Recommended" value has been set to "D"
+   following entries the "Recommended" value has been set to "D"
    indicating that the item is "Discouraged".
 
                        +=============+=============+
@@ -388,27 +417,50 @@ Table of Contents
                        +-------------+-------------+
                        | secp224r1   | D           |
                        +-------------+-------------+
+                       | ffdhe2048   | D           |
+                       +-------------+-------------+
 
-                                  Table 2
+                                  Table 3
 
-6.3.  TLS SignatureScheme
-
-   IANA is requested to update the TLS Cipher Suites registry under the
-   Transport Layer Security (TLS) Parameters heading.  For
-   TLS_SHA256_SHA256 and TLS_SHA384_SHA384 the "Recommended" value has
-   been set to "D" indicating that the items are "Discouraged".
+6.4.  TLS SignatureScheme
 
    IANA is requested to update the TLS SignatureScheme registry under
-   the Transport Layer Security (TLS) Parameters heading.  For
-   rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 the
-   "Recommended" value has been set to "N".  For rsa_pkcs1_sha1,
-   ecdsa_sha1, rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and
-   rsa_pkcs1_sha512_legacy the the "Recommended" value has been set to
-   "D" indicating that the item is "Discouraged".
+   the Transport Layer Security (TLS) Parameters heading.  For the
+   following entries the the "Recommended" value has been set to "D"
+   indicating that the item is "Discouraged" or to "N".
+
+                 +=========================+=============+
+                 | Desctiption             | Recommended |
+                 +=========================+=============+
+                 | rsa_pkcs1_sha1          | D           |
+                 +-------------------------+-------------+
+                 | ecdsa_sha1              | D           |
+                 +-------------------------+-------------+
+                 | rsa_pkcs1_sha256        | N           |
+                 +-------------------------+-------------+
+                 | rsa_pkcs1_sha256_legacy | D           |
+                 +-------------------------+-------------+
+                 | rsa_pkcs1_sha384        | N           |
+                 +-------------------------+-------------+
+                 | rsa_pkcs1_sha384_legacy | D           |
+                 +-------------------------+-------------+
+                 | rsa_pkcs1_sha512        | N           |
+                 +-------------------------+-------------+
+                 | rsa_pkcs1_sha512_legacy | D           |
+                 +-------------------------+-------------+
+
+                                  Table 4
 
 7.  References
 
 7.1.  Normative References
+
+   [I-D.ietf-tls-deprecate-obsolete-kex]
+              Bartle, C. and N. Aviram, "Deprecating Obsolete Key
+              Exchange Methods in TLS", Work in Progress, Internet-
+              Draft, draft-ietf-tls-deprecate-obsolete-kex-01, 11
+              December 2022, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-tls-deprecate-obsolete-kex-01>.
 
    [I-D.ietf-tls-rfc8447bis]
               Salowey, J. A. and S. Turner, "IANA Registry Updates for
@@ -429,6 +481,10 @@ Table of Contents
    [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
               Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
               <https://www.rfc-editor.org/rfc/rfc8446>.
+
+   [RFC9113]  Thomson, M., Ed. and C. Benfield, Ed., "HTTP/2", RFC 9113,
+              DOI 10.17487/RFC9113, June 2022,
+              <https://www.rfc-editor.org/rfc/rfc9113>.
 
    [RFC9147]  Rescorla, E., Tschofenig, H., and N. Modadugu, "The
               Datagram Transport Layer Security (DTLS) Protocol Version
@@ -575,10 +631,6 @@ Table of Contents
    [RFC9001]  Thomson, M., Ed. and S. Turner, Ed., "Using TLS to Secure
               QUIC", RFC 9001, DOI 10.17487/RFC9001, May 2021,
               <https://www.rfc-editor.org/rfc/rfc9001>.
-
-   [RFC9113]  Thomson, M., Ed. and C. Benfield, Ed., "HTTP/2", RFC 9113,
-              DOI 10.17487/RFC9113, June 2022,
-              <https://www.rfc-editor.org/rfc/rfc9113>.
 
    [RFC9150]  Cam-Winget, N. and J. Visoky, "TLS 1.3 Authentication and
               Integrity-Only Cipher Suites", RFC 9150,
