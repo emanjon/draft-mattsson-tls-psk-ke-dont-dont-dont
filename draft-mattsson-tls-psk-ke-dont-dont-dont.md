@@ -37,7 +37,9 @@ normative:
   RFC2119:
   RFC8174:
   RFC8446:
+  RFC9113:
   RFC9147:
+  I-D.ietf-tls-deprecate-obsolete-kex:
   I-D.ietf-tls-rfc8447bis:
 
 informative:
@@ -48,7 +50,6 @@ informative:
   RFC8017:
   RFC8447:
   RFC9001:
-  RFC9113:
   RFC9150:
   RFC9151:
   RFC9257:
@@ -309,14 +310,28 @@ Recommendations regarding RSASSA-PKCS1-v1_5 varies. The RSA Cryptography Specifi
 
 ## TLS PskKeyExchangeMode
 
-IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading'. For the following values the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
+IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading'. For the following entry the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
 
 | Desctiption | Recommended |
 | psk_ke | D |
 
+## TLS Cipher Suites
+
+IANA is requested to update the TLS Cipher Suites registry under the Transport Layer Security (TLS) Parameters heading.
+
+
+For TLS_SHA256_SHA256 and TLS_SHA384_SHA384 the "Recommended" value has been set to "D" indicating that the items are "Discouraged". For all cipher suites listed in Appendix A of {{RFC9113}}, all cipher suites listed in Appendix A of {{I-D.ietf-tls-deprecate-obsolete-kex}}, and the following entries the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
+
+| Desctiption | Recommended |
+| TLS_SHA256_SHA256 | D |
+| TLS_SHA384_SHA384 | D |
+| TLS_PSK_DHE_WITH_AES_128_CCM_8 | D |
+| TLS_PSK_DHE_WITH_AES_256_CCM_8| D |
+| TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 | D |
+
 ## TLS Supported Groups
 
-IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For the following values the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
+IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
 
 | Desctiption | Recommended |
 | sect163k1 | D |
@@ -334,15 +349,21 @@ IANA is requested to update the TLS Supported Groups registry under the Transpor
 | secp192r1 | D |
 | secp224k1 | D |
 | secp224r1 | D |
+| ffdhe2048 | D |
 
 ## TLS SignatureScheme
 
-IANA is requested to update the TLS Cipher Suites registry under the Transport Layer Security (TLS) Parameters heading. For TLS_SHA256_SHA256 and TLS_SHA384_SHA384 the "Recommended" value has been set to "D" indicating that the items are "Discouraged".
+IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the the "Recommended" value has been set to "D" indicating that the item is "Discouraged" or to "N".
 
-
-
-
-IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 the "Recommended" value has been set to "N". For rsa_pkcs1_sha1, ecdsa_sha1, rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and rsa_pkcs1_sha512_legacy the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
+| Desctiption | Recommended |
+| rsa_pkcs1_sha1 | D |
+| ecdsa_sha1 | D |
+| rsa_pkcs1_sha256 | N |
+| rsa_pkcs1_sha256_legacy | D |
+| rsa_pkcs1_sha384 | N |
+| rsa_pkcs1_sha384_legacy | D |
+| rsa_pkcs1_sha512 | N |
+| rsa_pkcs1_sha512_legacy| D |
 
 --- back
 
