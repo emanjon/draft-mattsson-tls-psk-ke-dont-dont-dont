@@ -285,7 +285,7 @@ Modern ephemeral key exchange algorithms like x25519 {{RFC7748}} are very fast a
 
 Unfortunately, psk_ke is marked as "Recommended" in the IANA PskKeyExchangeMode registry. This may severely weaken security in deployments following the "Recommended" column.  Introducing TLS 1.3 in 3GPP had the unfortunate and surprising effect of drastically lowering the minimum security when TLS is used with PSK authentication.  Some companies in 3GPP have been unwilling to mark psk_ke as not recommended as it is so clearly marked as "Recommended" by the IETF. By labeling psk_ke as "Recommended", IETF is legitimizing and implicitly promoting bad security practice.
 
-This document sets the Recommended value of psk_ke to "D" indicating discouraged.
+This document sets the "Recommended" value of psk_ke to "D" indicating that it is "Discouraged".
 
 {{RFC9113}} describes and classifies prohibited TLS 1.2 cipher suites without forward secrecy. This document sets the "Recommended" value of all cipher suites listed in Appendix A of {{RFC9113}} as well as TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 to "D" indicating that they are "Discouraged".
 
@@ -295,17 +295,17 @@ Cipher suites with NULL encryption enables passive monitoring {{RFC7258}} and we
 
 Modern encryption algorithms like AES-GCM {{RFC5288}} are very fast and have small message overhead. Upcoming algorithms like AEGIS {{I-D.irtf-cfrg-aegis-aead}} is much faster than AES-GCM {{AEGIS-PERF}}. NULL encryption has no raison d'{{{ê}}}tre in two-party protocols.
 
-Two essential zero trust principles are to assume that breach is inevitable or has likely already occurred {{NSA-ZT}}, and to minimize impact when breach occur {{NIST-ZT}}. One type of breach is an on-path attacker present on the enterprise network. In {{NIST-ZT2}}, NIST states as the first basic assumption for network connectivity for any organization that utilizes Zero trust is that:
+Two essential zero trust principles are to assume that breach is inevitable or has likely already occurred {{NSA-ZT}}, and to minimize impact when breach occur {{NIST-ZT}}. One type of breach is an on-path attacker present on the enterprise network. In {{NIST-ZT2}}, NIST states as the first basic assumption for network connectivity for any organization that utilizes zero trust is that:
 
 - "The entire enterprise private network is not considered an implicit trust zone. Assets should always act as if an attacker is present on the enterprise network, and communication should be done in the most secure manner available. This entails actions such as authenticating all connections and encrypting all traffic."
 
-This document sets the Recommended value of TLS_SHA256_SHA256 and TLS_SHA384_SHA384 to "D" indicating that they are discouraged.
+This document sets the "Recommended" value of TLS_SHA256_SHA256 and TLS_SHA384_SHA384 to "D" indicating that they are  "Discouraged".
 
 # Obsolete Key Exchange
 
-Government organizations like NIST, ANSSI, BSI, and NSA have already produced recommendations regarding the deprecation of key exchange algorithms with less than 128-bit security such as ffdhe2048. NIST {{NIST-Lifetime}} and ANSSI {{ANSSI-TLS}} only allow 2048-bit Finite Field Diffie-Hellman if the application data does not have to be protected after 2030. If the application data had a security life of ten years, NIST and ANSSI allowed use of ffdhe2048 until December 31, 2020. BSI {{BSI}} allowed use of ffdhe2048 up to the year 2022. The Commercial National Security Algorithm Suite (CNSA) {{RFC9151}} forbids the use of ffdhe2048.  ECDH groups offer less than 128-bit security are forbidden to use in TLS 1.3. This document sets the Recommended value of ffdhe2048, secp160k1, secp160r1, secp160r2, sect163k1, sect163r1, sect163r2, secp192k1, secp192r1, sect193r1, sect193r2, secp224k1, secp224r1m sect233k1, sect233r1, and sect239k1 to "D" indicating that they are discouraged.
+Government organizations like NIST, ANSSI, BSI, and NSA have already produced recommendations regarding the deprecation of key exchange algorithms with less than 128-bit security such as ffdhe2048. NIST {{NIST-Lifetime}} and ANSSI {{ANSSI-TLS}} only allow 2048-bit Finite Field Diffie-Hellman if the application data does not have to be protected after 2030. If the application data had a security life of ten years, NIST and ANSSI allowed use of ffdhe2048 until December 31, 2020. BSI {{BSI}} allowed use of ffdhe2048 up to the year 2022. The Commercial National Security Algorithm Suite (CNSA) {{RFC9151}} forbids the use of ffdhe2048.  ECDHE groups that offer less than 128-bit security are forbidden to use in TLS 1.3. This document sets the "Recommended" value of ffdhe2048, secp160k1, secp160r1, secp160r2, sect163k1, sect163r1, sect163r2, secp192k1, secp192r1, sect193r1, sect193r2, secp224k1, secp224r1m sect233k1, sect233r1, and sect239k1 to "D" indicating that they are  "Discouraged".
 
-{{I-D.ietf-tls-deprecate-obsolete-kex}} describes and classifies cipher suites with obsolete key exchange methods in TLS 1.2 but does not downgrode the "Recommended" value of the cipher suites. This document sets the "Recommended" value of all cipher suites listed in Appendix A of {{I-D.ietf-tls-deprecate-obsolete-kex}} to "D" indicating that they are "Discouraged".
+{{I-D.ietf-tls-deprecate-obsolete-kex}} describes and classifies cipher suites with obsolete key exchange methods in TLS 1.2 but does not downgrode the "Recommended" value. This document sets the "Recommended" value of all cipher suites listed in Appendix A of {{I-D.ietf-tls-deprecate-obsolete-kex}} to "D" indicating that they are "Discouraged".
 
 # Signature Algorithms with PKCS #1 v1.5 Padding or SHA-1
 
