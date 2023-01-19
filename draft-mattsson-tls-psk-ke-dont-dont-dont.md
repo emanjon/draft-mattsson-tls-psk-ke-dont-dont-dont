@@ -311,7 +311,7 @@ IANA is requested to update the TLS PskKeyExchangeMode registry under the Transp
 
 IANA is requested to update the TLS Cipher Suites registry under the Transport Layer Security (TLS) Parameters heading. For TLS_SHA256_SHA256 and TLS_SHA384_SHA384 the "Recommended" value has been set to "D" indicating that the items are "Discouraged".
 
-IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For ffdhe2048 the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
+IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For ffdhe2048, secp160k1, secp160r1, secp160r2, sect163k1, sect163r1, sect163r2, secp192k1, secp192r1, sect193r1, sect193r2, secp224k1, secp224r1, sect233k1, sect233r1, and sect239k1 the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
 
 IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 the "Recommended" value has been set to "N". For rsa_pkcs1_sha1, ecdsa_sha1, rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and rsa_pkcs1_sha512_legacy the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
 
