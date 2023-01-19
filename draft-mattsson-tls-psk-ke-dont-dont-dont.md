@@ -307,18 +307,17 @@ This document sets the Recommended value of secp160k1, secp160r1, secp160r2, sec
 
 # Signature Algorithms with PKCS #1 v1.5 Padding or SHA-1
 
-Recommendations regarding RSASSA-PKCS1-v1_5 in certificates varies. The RSA Cryptography Specifications {{RFC8017}} specifies that "RSASSA-PSS is REQUIRED in new applications. RSASSA-PKCS1-v1_5 is included only for compatibility with existing applications.". BSI {{BSI}} allows use of the PKCS #1 v1.5 padding scheme in certificates up to the year 2025. The Commercial National Security Algorithm (CNSA) {{RFC9151}} requires offer of rsa_pkcs1_sha384. This document sets the Recommended value of rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 to "N".
+Recommendations regarding RSASSA-PKCS1-v1_5 in certificates varies. The RSA Cryptography Specifications {{RFC8017}} specifies that "RSASSA-PSS is REQUIRED in new applications. RSASSA-PKCS1-v1_5 is included only for compatibility with existing applications.". BSI {{BSI}} allows use of the PKCS #1 v1.5 padding scheme in certificates up to the year 2025. The Commercial National Security Algorithm (CNSA) {{RFC9151}} requires offer of rsa_pkcs1_sha384 in certificates. This document sets the Recommended value of rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 to "N".
 
-{{RFC8446}} forbids the use of RSASSA-PKCS1-v1_5 in signed TLS handshake messages. {{I-D.davidben-tls13-pkcs1}} registered new RSASSA-PKCS1-v1_5 Signature Algorithms for use in signed TLS 1.3 handshake messages. This document sets the Recommended value of rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and rsa_pkcs1_sha512_legacy to "D" indicating that they are "Discouraged".
+{{RFC8446}} forbids the use of RSASSA-PKCS1-v1_5 in signed TLS handshake messages. {{I-D.davidben-tls13-pkcs1}} registered new RSASSA-PKCS1-v1_5 signature algorithms for use in signed TLS 1.3 handshake messages. This document sets the Recommended value of rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and rsa_pkcs1_sha512_legacy to "D" indicating that they are "Discouraged".
 
-{{RFC8446}} labels rsa_pkcs1_sha1 and ecdsa_sha1 in certificates as legacy algorithms which are being deprecated and that endpoints SHOULD NOT or in MUST NOT negotiate. This document sets the Recommended value of rsa_pkcs1_sha1 and ecdsa_sha1
-to "D" indicating that they are "Discouraged".
+{{RFC8446}} labels rsa_pkcs1_sha1 and ecdsa_sha1 in certificates as legacy algorithms which are being deprecated and that endpoints SHOULD NOT or MUST NOT negotiate. This document sets the Recommended value of rsa_pkcs1_sha1 and ecdsa_sha1 to "D" indicating that they are "Discouraged".
 
 # IANA Considerations
 
 ## TLS PskKeyExchangeMode
 
-IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading'. For the following entry the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
+IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading. For the following entry the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
 
 | Desctiption | Recommended |
 | psk_ke | D |
@@ -361,7 +360,7 @@ IANA is requested to update the TLS Supported Groups registry under the Transpor
 
 ## TLS SignatureScheme
 
-IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the the "Recommended" value has been set to "D" indicating that the items are "Discouraged" or to "N".
+IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the "Recommended" value has been set to "N" or "D" where "D" indicates that the items are "Discouraged".
 
 | Desctiption | Recommended |
 | rsa_pkcs1_sha1 | D |
