@@ -307,11 +307,40 @@ Recommendations regarding RSASSA-PKCS1-v1_5 varies. The RSA Cryptography Specifi
 
 # IANA Considerations
 
-IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading.  For psk_ke the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
+## TLS PskKeyExchangeMode
+
+IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading'. For the following values the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
+
+| Desctiption | Recommended |
+| psk_ke | D |
+
+## TLS Supported Groups
+
+IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For the following values the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
+
+| Desctiption | Recommended |
+| sect163k1 | D |
+| sect163r1 | D |
+| sect163r2 | D |
+| sect193r1 | D |
+| sect193r2 | D |
+| sect233k1 | D |
+| sect233r1 | D |
+| sect239k1 | D |
+| secp160k1 | D |
+| secp160r1 | D |
+| secp160r2 | D |
+| secp192k1 | D |
+| secp192r1 | D |
+| secp224k1 | D |
+| secp224r1 | D |
+
+## TLS SignatureScheme
 
 IANA is requested to update the TLS Cipher Suites registry under the Transport Layer Security (TLS) Parameters heading. For TLS_SHA256_SHA256 and TLS_SHA384_SHA384 the "Recommended" value has been set to "D" indicating that the items are "Discouraged".
 
-IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For ffdhe2048, secp160k1, secp160r1, secp160r2, sect163k1, sect163r1, sect163r2, secp192k1, secp192r1, sect193r1, sect193r2, secp224k1, secp224r1, sect233k1, sect233r1, and sect239k1 the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
+
+
 
 IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 the "Recommended" value has been set to "N". For rsa_pkcs1_sha1, ecdsa_sha1, rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and rsa_pkcs1_sha512_legacy the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
 
