@@ -56,6 +56,7 @@ informative:
   I-D.ietf-emu-aka-pfs:
   I-D.ietf-tls-rfc8446bis:
   I-D.irtf-cfrg-aegis-aead:
+  I-D.davidben-tls13-pkcs1:
 
   Akhmetzyanova:
     target: https://eprint.iacr.org/2019/421.pdf
@@ -302,9 +303,14 @@ This document sets the Recommended value of TLS_SHA256_SHA256 and TLS_SHA384_SHA
 
 Government organizations like NIST, ANSSI, BSI, and NSA have already produced recommendations regarding the deprecation of ffdhe2048. NIST {{NIST-Lifetime}} and ANSSI {{ANSSI-TLS}} only allow 2048-bit Finite Field Diffie-Hellman if the application data does not have to be protected after 2030. If the application data had a security life of ten years, NIST and ANSSI allowed use of ffdhe2048 until December 31, 2020. BSI {{BSI}} allowed use of ffdhe2048 up to the year 2022. The Commercial National Security Algorithm Suite (CNSA) {{RFC9151}} forbids the use of ffdhe2048. This document sets the Recommended value of ffdhe2048 to "D" indicating discouraged.
 
-# Signature Algorithms with PKCS #1 v1.5 Padding
+# Signature Algorithms with PKCS #1 v1.5 Padding or SHA-1
 
-Recommendations regarding RSASSA-PKCS1-v1_5 varies. The RSA Cryptography Specifications {{RFC8017}} specifies that "RSASSA-PSS is REQUIRED in new applications. RSASSA-PKCS1-v1_5 is included only for compatibility with existing applications.". BSI {{BSI}} allows use of the PKCS #1 v1.5 padding scheme in TLS certificates up to the year 2025. The Commercial National Security Algorithm (CNSA) {{RFC9151}} requires offer of rsa_pkcs1_sha384 . This document sets the Recommended value of rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 to "N".
+Recommendations regarding RSASSA-PKCS1-v1_5 in certificates varies. The RSA Cryptography Specifications {{RFC8017}} specifies that "RSASSA-PSS is REQUIRED in new applications. RSASSA-PKCS1-v1_5 is included only for compatibility with existing applications.". BSI {{BSI}} allows use of the PKCS #1 v1.5 padding scheme in certificates up to the year 2025. The Commercial National Security Algorithm (CNSA) {{RFC9151}} requires offer of rsa_pkcs1_sha384. This document sets the Recommended value of rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 to "N".
+
+{{RFC8446}} forbids the use of RSASSA-PKCS1-v1_5 in signed TLS handshake messages. {{I-D.davidben-tls13-pkcs1}} registered new RSASSA-PKCS1-v1_5 Signature Algorithms for use in signed TLS 1.3 handshake messages. This document sets the Recommended value of rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and rsa_pkcs1_sha512_legacy to "D" indicating that they are "Discouraged".
+
+{{RFC8446}} labels rsa_pkcs1_sha1 and ecdsa_sha1 in certificates as legacy algorithms which are being deprecated and that endpoints SHOULD NOT or in MUST NOT negotiate. This document sets the Recommended value of rsa_pkcs1_sha1 and ecdsa_sha1
+to "D" indicating that they are "Discouraged".
 
 # IANA Considerations
 
