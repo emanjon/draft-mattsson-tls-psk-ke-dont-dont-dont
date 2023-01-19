@@ -323,7 +323,7 @@ IANA is requested to update the TLS PskKeyExchangeMode registry under the Transp
 
 | Description | Recommended |
 | psk_ke | D |
-{: title="Downgraded TLS PSK Key Exchange Modes"}
+{: title="Downgraded TLS PSK Key Exchange Modes" cols="l c"}
 
 ## TLS Cipher Suites
 
@@ -333,7 +333,7 @@ IANA is requested to update the TLS Cipher Suites registry under the Transport L
 | TLS_SHA256_SHA256 | D |
 | TLS_SHA384_SHA384 | D |
 | TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 | D |
-{: title="Downgraded TLS Cipher Suites"}
+{: title="Downgraded TLS Cipher Suites" cols="l c"}
 
 ## TLS Supported Groups
 
@@ -356,7 +356,7 @@ IANA is requested to update the TLS Supported Groups registry under the Transpor
 | secp224k1 | D |
 | secp224r1 | D |
 | ffdhe2048 | D |
-{: title="Downgraded TLS Supported Groups"}
+{: title="Downgraded TLS Supported Groups" cols="l c"}
 
 ## TLS SignatureScheme
 
@@ -371,7 +371,7 @@ IANA is requested to update the TLS SignatureScheme registry under the Transport
 | rsa_pkcs1_sha384_legacy | D |
 | rsa_pkcs1_sha512 | N |
 | rsa_pkcs1_sha512_legacy| D |
-{: title="Downgraded TLS Signature Schemes"}
+{: title="Downgraded TLS Signature Schemes" cols="l c"}
 
 --- back
 
