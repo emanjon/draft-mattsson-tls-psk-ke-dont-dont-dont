@@ -25,10 +25,11 @@ Abstract
    encryption is used an on-path attacker can read all application data.
    The use of psk_ke and NULL encryption are not following zero trust
    principles of minimizing the impact of breach and governments have
-   already made deadlines for their deprecation.  This document sets the
-   Recommended values of psk_ke, TLS_SHA256_SHA256, TLS_SHA384_SHA384,
-   ffdhe2048 to "D" and the Recommended values of rsa_pkcs1_sha256,
-   rsa_pkcs1_sha384, and rsa_pkcs1_sha512 to "N".
+   already made deadlines for their deprecation.  This document
+   evaluates TLS pre-shared key exchange modes, (EC)DHE groups,
+   signature algorithms, and cipher suites and downgrades many entries
+   to "N" and "D" where "D" indicates that the entries are
+   "Discouraged".
 
 About This Document
 
@@ -85,7 +86,7 @@ Table of Contents
      1.1.  Terminology
    2.  Key Exchange Without Forward Secrecy
    3.  Cipher Suites with NULL Encryption
-   4.  Diffie-Hellman Groups with Less than 128-bit Security
+   4.  Obsolete Key Exchange
    5.  Signature Algorithms with PKCS #1 v1.5 Padding or SHA-1
    6.  IANA Considerations
      6.1.  TLS PskKeyExchangeMode
@@ -113,15 +114,15 @@ Table of Contents
    requirements, and best practices have changed in the more than 4
    years since [RFC8446] and [RFC8447] were published.
 
-   This document evaluates TLS 1.3 pre-shared key exchange modes,
-   (EC)DHE groups, signature algorithms, and cipher suites and changes
-   the values in the Recommended column for psk_ke, TLS_SHA256_SHA256,
-   TLS_SHA384_SHA384, ffdhe2048, rsa_pkcs1_sha256, rsa_pkcs1_sha384, and
-   rsa_pkcs1_sha512.  The document does not evaluate TLS 1.2 parameters.
-   TLS 1.2 is obsolete [RFC8446] and NIST requires support for TLS 1.3
-   by January 1, 2024 [NIST-TLS].  This means that two NIST compatible
-   implementations will never negotiate TLS 1.2 at the time this
-   document would be published.
+   This document evaluates TLS pre-shared key exchange modes, (EC)DHE
+   groups, signature algorithms, and cipher suites and downgrades many
+   entries to "N" and "D" where "D" indicates that the entries are
+   "Discouraged".  While TLS 1.2 is obsolete [RFC8446] and two NIST
+   compatible [NIST-TLS] implementations will never negotiate TLS 1.2
+   after January 1, 2024, DTLS 1.3 [RFC9147] was recently published.
+   DTLS 1.2 will therefore continue to be allowed for several years and
+   a distinction between recommended and discouraged parameters is
+   warranted.
 
 1.1.  Terminology
 
@@ -273,6 +274,12 @@ Table of Contents
    This document sets the Recommended value of psk_ke to "D" indicating
    discouraged.
 
+   [RFC9113] describes and classifies prohibited TLS 1.2 cipher suites
+   without forward secrecy.  This document sets the "Recommended" value
+   of all cipher suites listed in Appendix A of [RFC9113] as well as
+   TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 to "D" indicating that they are
+   "Discouraged".
+
 3.  Cipher Suites with NULL Encryption
 
    Cipher suites with NULL encryption enables passive monitoring
@@ -307,23 +314,30 @@ Table of Contents
    This document sets the Recommended value of TLS_SHA256_SHA256 and
    TLS_SHA384_SHA384 to "D" indicating that they are discouraged.
 
-4.  Diffie-Hellman Groups with Less than 128-bit Security
+4.  Obsolete Key Exchange
 
    Government organizations like NIST, ANSSI, BSI, and NSA have already
-   produced recommendations regarding the deprecation of ffdhe2048.
-   NIST [NIST-Lifetime] and ANSSI [ANSSI-TLS] only allow 2048-bit Finite
+   produced recommendations regarding the deprecation of key exchange
+   algorithms with less than 128-bit security such as ffdhe2048.  NIST
+   [NIST-Lifetime] and ANSSI [ANSSI-TLS] only allow 2048-bit Finite
    Field Diffie-Hellman if the application data does not have to be
    protected after 2030.  If the application data had a security life of
    ten years, NIST and ANSSI allowed use of ffdhe2048 until December 31,
    2020.  BSI [BSI] allowed use of ffdhe2048 up to the year 2022.  The
    Commercial National Security Algorithm Suite (CNSA) [RFC9151] forbids
-   the use of ffdhe2048.  This document sets the Recommended value of
-   ffdhe2048 to "D" indicating that it is discouraged.
+   the use of ffdhe2048.  ECDH groups offer less than 128-bit security
+   are forbidden to use in TLS 1.3.  This document sets the Recommended
+   value of ffdhe2048, secp160k1, secp160r1, secp160r2, sect163k1,
+   sect163r1, sect163r2, secp192k1, secp192r1, sect193r1, sect193r2,
+   secp224k1, secp224r1m sect233k1, sect233r1, and sect239k1 to "D"
+   indicating that they are discouraged.
 
-   This document sets the Recommended value of secp160k1, secp160r1,
-   secp160r2, sect163k1, sect163r1, sect163r2, secp192k1, secp192r1,
-   sect193r1, sect193r2, secp224k1, secp224r1m sect233k1, sect233r1, and
-   sect239k1 to "D" indicating that they are discouraged.
+   [I-D.ietf-tls-deprecate-obsolete-kex] describes and classifies cipher
+   suites with obsolete key exchange methods in TLS 1.2 but does not
+   downgrode the "Recommended" value of the cipher suites.  This
+   document sets the "Recommended" value of all cipher suites listed in
+   Appendix A of [I-D.ietf-tls-deprecate-obsolete-kex] to "D" indicating
+   that they are "Discouraged".
 
 5.  Signature Algorithms with PKCS #1 v1.5 Padding or SHA-1
 
@@ -334,22 +348,22 @@ Table of Contents
    allows use of the PKCS #1 v1.5 padding scheme in certificates up to
    the year 2025.  The Commercial National Security Algorithm (CNSA)
    [RFC9151] requires offer of rsa_pkcs1_sha384 in certificates.  This
-   document sets the Recommended value of rsa_pkcs1_sha256,
+   document sets the "Recommended" value of rsa_pkcs1_sha256,
    rsa_pkcs1_sha384, and rsa_pkcs1_sha512 to "N".
 
    [RFC8446] forbids the use of RSASSA-PKCS1-v1_5 in signed TLS
    handshake messages.  [I-D.davidben-tls13-pkcs1] registered new
    RSASSA-PKCS1-v1_5 signature algorithms for use in signed TLS 1.3
-   handshake messages.  This document sets the Recommended value of
+   handshake messages.  This document sets the "Recommended" value of
    rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and
    rsa_pkcs1_sha512_legacy to "D" indicating that they are
    "Discouraged".
 
-   [RFC8446] labels rsa_pkcs1_sha1 and ecdsa_sha1 in certificates as
-   legacy algorithms which are being deprecated and that endpoints
-   SHOULD NOT or MUST NOT negotiate.  This document sets the Recommended
-   value of rsa_pkcs1_sha1 and ecdsa_sha1 to "D" indicating that they
-   are "Discouraged".
+   [RFC8446] labels rsa_pkcs1_sha1 and ecdsa_sha1 as legacy algorithms
+   which are being deprecated and that endpoints SHOULD NOT or MUST NOT
+   negotiate.  This document sets the "Recommended" value of
+   rsa_pkcs1_sha1 and ecdsa_sha1 to "D" indicating that they are
+   "Discouraged".
 
 6.  IANA Considerations
 
@@ -384,10 +398,6 @@ Table of Contents
           | TLS_SHA256_SHA256                     | D           |
           +---------------------------------------+-------------+
           | TLS_SHA384_SHA384                     | D           |
-          +---------------------------------------+-------------+
-          | TLS_PSK_DHE_WITH_AES_128_CCM_8        | D           |
-          +---------------------------------------+-------------+
-          | TLS_PSK_DHE_WITH_AES_256_CCM_8        | D           |
           +---------------------------------------+-------------+
           | TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 | D           |
           +---------------------------------------+-------------+
