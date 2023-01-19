@@ -271,8 +271,8 @@ Table of Contents
    by the IETF.  By labeling psk_ke as "Recommended", IETF is
    legitimizing and implicitly promoting bad security practice.
 
-   This document sets the Recommended value of psk_ke to "D" indicating
-   discouraged.
+   This document sets the "Recommended" value of psk_ke to "D"
+   indicating that it is "Discouraged".
 
    [RFC9113] describes and classifies prohibited TLS 1.2 cipher suites
    without forward secrecy.  This document sets the "Recommended" value
@@ -302,7 +302,7 @@ Table of Contents
    impact when breach occur [NIST-ZT].  One type of breach is an on-path
    attacker present on the enterprise network.  In [NIST-ZT2], NIST
    states as the first basic assumption for network connectivity for any
-   organization that utilizes Zero trust is that:
+   organization that utilizes zero trust is that:
 
    *  "The entire enterprise private network is not considered an
       implicit trust zone.  Assets should always act as if an attacker
@@ -311,8 +311,8 @@ Table of Contents
       such as authenticating all connections and encrypting all
       traffic."
 
-   This document sets the Recommended value of TLS_SHA256_SHA256 and
-   TLS_SHA384_SHA384 to "D" indicating that they are discouraged.
+   This document sets the "Recommended" value of TLS_SHA256_SHA256 and
+   TLS_SHA384_SHA384 to "D" indicating that they are "Discouraged".
 
 4.  Obsolete Key Exchange
 
@@ -325,19 +325,19 @@ Table of Contents
    ten years, NIST and ANSSI allowed use of ffdhe2048 until December 31,
    2020.  BSI [BSI] allowed use of ffdhe2048 up to the year 2022.  The
    Commercial National Security Algorithm Suite (CNSA) [RFC9151] forbids
-   the use of ffdhe2048.  ECDH groups offer less than 128-bit security
-   are forbidden to use in TLS 1.3.  This document sets the Recommended
-   value of ffdhe2048, secp160k1, secp160r1, secp160r2, sect163k1,
-   sect163r1, sect163r2, secp192k1, secp192r1, sect193r1, sect193r2,
-   secp224k1, secp224r1m sect233k1, sect233r1, and sect239k1 to "D"
-   indicating that they are discouraged.
+   the use of ffdhe2048.  ECDHE groups that offer less than 128-bit
+   security are forbidden to use in TLS 1.3.  This document sets the
+   "Recommended" value of ffdhe2048, secp160k1, secp160r1, secp160r2,
+   sect163k1, sect163r1, sect163r2, secp192k1, secp192r1, sect193r1,
+   sect193r2, secp224k1, secp224r1m sect233k1, sect233r1, and sect239k1
+   to "D" indicating that they are "Discouraged".
 
    [I-D.ietf-tls-deprecate-obsolete-kex] describes and classifies cipher
    suites with obsolete key exchange methods in TLS 1.2 but does not
-   downgrode the "Recommended" value of the cipher suites.  This
-   document sets the "Recommended" value of all cipher suites listed in
-   Appendix A of [I-D.ietf-tls-deprecate-obsolete-kex] to "D" indicating
-   that they are "Discouraged".
+   downgrode the "Recommended" value.  This document sets the
+   "Recommended" value of all cipher suites listed in Appendix A of
+   [I-D.ietf-tls-deprecate-obsolete-kex] to "D" indicating that they are
+   "Discouraged".
 
 5.  Signature Algorithms with PKCS #1 v1.5 Padding or SHA-1
 
