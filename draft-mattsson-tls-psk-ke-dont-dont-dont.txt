@@ -389,7 +389,7 @@ Table of Contents
    Transport Layer Security (TLS) Parameters heading.  For all cipher
    suites listed in Appendix A of [RFC9113], all cipher suites listed in
    Appendix A of [I-D.ietf-tls-deprecate-obsolete-kex], and the
-   following entries the "Recommended" value has been set to "D"
+   following entries the "Recommended" value have been set to "D"
    indicating that the items are "Discouraged".
 
           +=======================================+=============+
@@ -408,7 +408,7 @@ Table of Contents
 
    IANA is requested to update the TLS Supported Groups registry under
    the Transport Layer Security (TLS) Parameters heading.  For the
-   following entries the "Recommended" value has been set to "D"
+   following entries the "Recommended" value have been set to "D"
    indicating that the items are "Discouraged".
 
                        +=============+=============+
@@ -454,7 +454,7 @@ Table of Contents
 
    IANA is requested to update the TLS SignatureScheme registry under
    the Transport Layer Security (TLS) Parameters heading.  For the
-   following entries the "Recommended" value has been set to "N" or "D"
+   following entries the "Recommended" value have been set to "N" or "D"
    where "D" indicates that the items are "Discouraged".
 
                  +=========================+=============+
