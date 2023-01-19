@@ -118,11 +118,11 @@ Table of Contents
    groups, signature algorithms, and cipher suites and downgrades many
    entries to "N" and "D" where "D" indicates that the entries are
    "Discouraged".  While TLS 1.2 is obsolete [RFC8446] and two NIST
-   compatible [NIST-TLS] implementations will never negotiate TLS 1.2
-   after January 1, 2024, DTLS 1.3 [RFC9147] was recently published.
-   DTLS 1.2 will therefore continue to be allowed for several years and
-   a distinction between recommended and discouraged parameters is
-   warranted.
+   compatible [NIST-TLS] implementations will therefore never negotiate
+   TLS 1.2 after January 1, 2024, DTLS 1.3 [RFC9147] was recently
+   published.  DTLS 1.2 will therefore continue to be allowed for
+   several years and a distinction between recommended and discouraged
+   parameters is warranted.
 
 1.1.  Terminology
 
