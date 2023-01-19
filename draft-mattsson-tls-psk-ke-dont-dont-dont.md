@@ -327,7 +327,7 @@ IANA is requested to update the TLS PskKeyExchangeMode registry under the Transp
 
 ## TLS Cipher Suites
 
-IANA is requested to update the TLS Cipher Suites registry under the Transport Layer Security (TLS) Parameters heading. For all cipher suites listed in Appendix A of {{RFC9113}}, all cipher suites listed in Appendix A of {{I-D.ietf-tls-deprecate-obsolete-kex}}, and the following entries the "Recommended" value has been set to "D" indicating that the items are "Discouraged".
+IANA is requested to update the TLS Cipher Suites registry under the Transport Layer Security (TLS) Parameters heading. For all cipher suites listed in Appendix A of {{RFC9113}}, all cipher suites listed in Appendix A of {{I-D.ietf-tls-deprecate-obsolete-kex}}, and the following entries the "Recommended" value have been set to "D" indicating that the items are "Discouraged".
 
 | Desctiption | Recommended |
 | TLS_SHA256_SHA256 | D |
@@ -337,7 +337,7 @@ IANA is requested to update the TLS Cipher Suites registry under the Transport L
 
 ## TLS Supported Groups
 
-IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the "Recommended" value has been set to "D" indicating that the items are "Discouraged".
+IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the "Recommended" value have been set to "D" indicating that the items are "Discouraged".
 
 | Desctiption | Recommended |
 | sect163k1 | D |
@@ -360,7 +360,7 @@ IANA is requested to update the TLS Supported Groups registry under the Transpor
 
 ## TLS SignatureScheme
 
-IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the "Recommended" value has been set to "N" or "D" where "D" indicates that the items are "Discouraged".
+IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the "Recommended" value have been set to "N" or "D" where "D" indicates that the items are "Discouraged".
 
 | Desctiption | Recommended |
 | rsa_pkcs1_sha1 | D |
