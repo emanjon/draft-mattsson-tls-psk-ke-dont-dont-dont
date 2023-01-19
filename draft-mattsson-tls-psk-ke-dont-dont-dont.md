@@ -319,9 +319,9 @@ Recommendations regarding RSASSA-PKCS1-v1_5 in certificates varies. The RSA Cryp
 
 ## TLS PskKeyExchangeMode
 
-IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading. For the following entry the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
+IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading. For the following entry the "Recommended" value has been set to "D" indicating that the item is "Discouraged".
 
-| Desctiption | Recommended |
+| Description | Recommended |
 | psk_ke | D |
 {: title="Downgraded TLS PSK Key Exchange Modes"}
 
@@ -329,7 +329,7 @@ IANA is requested to update the TLS PskKeyExchangeMode registry under the Transp
 
 IANA is requested to update the TLS Cipher Suites registry under the Transport Layer Security (TLS) Parameters heading. For all cipher suites listed in Appendix A of {{RFC9113}}, all cipher suites listed in Appendix A of {{I-D.ietf-tls-deprecate-obsolete-kex}}, and the following entries the "Recommended" value have been set to "D" indicating that the items are "Discouraged".
 
-| Desctiption | Recommended |
+| Description | Recommended |
 | TLS_SHA256_SHA256 | D |
 | TLS_SHA384_SHA384 | D |
 | TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 | D |
@@ -339,7 +339,7 @@ IANA is requested to update the TLS Cipher Suites registry under the Transport L
 
 IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the "Recommended" value have been set to "D" indicating that the items are "Discouraged".
 
-| Desctiption | Recommended |
+| Description | Recommended |
 | sect163k1 | D |
 | sect163r1 | D |
 | sect163r2 | D |
@@ -362,7 +362,7 @@ IANA is requested to update the TLS Supported Groups registry under the Transpor
 
 IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the "Recommended" value have been set to "N" or "D" where "D" indicates that the items are "Discouraged".
 
-| Desctiption | Recommended |
+| Description | Recommended |
 | rsa_pkcs1_sha1 | D |
 | ecdsa_sha1 | D |
 | rsa_pkcs1_sha256 | N |
