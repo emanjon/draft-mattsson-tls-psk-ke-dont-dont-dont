@@ -371,11 +371,11 @@ Table of Contents
 
    IANA is requested to update the TLS PskKeyExchangeMode registry under
    the Transport Layer Security (TLS) Parameters heading.  For the
-   following entry the the "Recommended" value has been set to "D"
+   following entry the "Recommended" value has been set to "D"
    indicating that the item is "Discouraged".
 
                        +=============+=============+
-                       | Desctiption | Recommended |
+                       | Description | Recommended |
                        +=============+=============+
                        | psk_ke      | D           |
                        +-------------+-------------+
@@ -393,7 +393,7 @@ Table of Contents
    indicating that the items are "Discouraged".
 
           +=======================================+=============+
-          | Desctiption                           | Recommended |
+          | Description                           | Recommended |
           +=======================================+=============+
           | TLS_SHA256_SHA256                     | D           |
           +---------------------------------------+-------------+
@@ -412,7 +412,7 @@ Table of Contents
    indicating that the items are "Discouraged".
 
                        +=============+=============+
-                       | Desctiption | Recommended |
+                       | Description | Recommended |
                        +=============+=============+
                        | sect163k1   | D           |
                        +-------------+-------------+
@@ -458,7 +458,7 @@ Table of Contents
    where "D" indicates that the items are "Discouraged".
 
                  +=========================+=============+
-                 | Desctiption             | Recommended |
+                 | Description             | Recommended |
                  +=========================+=============+
                  | rsa_pkcs1_sha1          | D           |
                  +-------------------------+-------------+
