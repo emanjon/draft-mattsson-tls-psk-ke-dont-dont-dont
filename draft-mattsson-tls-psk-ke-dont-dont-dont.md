@@ -297,11 +297,13 @@ Two essential zero trust principles are to assume that breach is inevitable or h
 
 - "The entire enterprise private network is not considered an implicit trust zone. Assets should always act as if an attacker is present on the enterprise network, and communication should be done in the most secure manner available. This entails actions such as authenticating all connections and encrypting all traffic."
 
-This document sets the Recommended value of TLS_SHA256_SHA256 and TLS_SHA384_SHA384 to "D" indicating discouraged.
+This document sets the Recommended value of TLS_SHA256_SHA256 and TLS_SHA384_SHA384 to "D" indicating that they are discouraged.
 
-# 2048-bit Finite Field Diffie-Hellman
+# Diffie-Hellman Groups with Less than 128-bit Security
 
-Government organizations like NIST, ANSSI, BSI, and NSA have already produced recommendations regarding the deprecation of ffdhe2048. NIST {{NIST-Lifetime}} and ANSSI {{ANSSI-TLS}} only allow 2048-bit Finite Field Diffie-Hellman if the application data does not have to be protected after 2030. If the application data had a security life of ten years, NIST and ANSSI allowed use of ffdhe2048 until December 31, 2020. BSI {{BSI}} allowed use of ffdhe2048 up to the year 2022. The Commercial National Security Algorithm Suite (CNSA) {{RFC9151}} forbids the use of ffdhe2048. This document sets the Recommended value of ffdhe2048 to "D" indicating discouraged.
+Government organizations like NIST, ANSSI, BSI, and NSA have already produced recommendations regarding the deprecation of ffdhe2048. NIST {{NIST-Lifetime}} and ANSSI {{ANSSI-TLS}} only allow 2048-bit Finite Field Diffie-Hellman if the application data does not have to be protected after 2030. If the application data had a security life of ten years, NIST and ANSSI allowed use of ffdhe2048 until December 31, 2020. BSI {{BSI}} allowed use of ffdhe2048 up to the year 2022. The Commercial National Security Algorithm Suite (CNSA) {{RFC9151}} forbids the use of ffdhe2048. This document sets the Recommended value of ffdhe2048 to "D" indicating that it is discouraged.
+
+This document sets the Recommended value of secp160k1, secp160r1, secp160r2, sect163k1, sect163r1, sect163r2, secp192k1, secp192r1, sect193r1, sect193r2, secp224k1, secp224r1m sect233k1, sect233r1, and sect239k1 to "D" indicating that they are discouraged.
 
 # Signature Algorithms with PKCS #1 v1.5 Padding or SHA-1
 
