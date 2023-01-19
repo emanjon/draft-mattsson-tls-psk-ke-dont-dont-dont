@@ -1162,6 +1162,17 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
             <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
+                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-tls-pskkeyexchangemode" class="internal xref">TLS PskKeyExchangeMode</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2">
+                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-tls-supported-groups" class="internal xref">TLS Supported Groups</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.3">
+                <p id="section-toc.1-1.6.2.3.1"><a href="#section-6.3" class="auto internal xref">6.3</a>.  <a href="#name-tls-signaturescheme" class="internal xref">TLS SignatureScheme</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
             <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-references" class="internal xref">References</a></p>
@@ -1435,10 +1446,117 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
       <h2 id="name-iana-considerations">
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<p id="section-6-1">IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading.  For psk_ke the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6-1" class="pilcrow">¶</a></p>
-<p id="section-6-2">IANA is requested to update the TLS Cipher Suites registry under the Transport Layer Security (TLS) Parameters heading. For TLS_SHA256_SHA256 and TLS_SHA384_SHA384 the "Recommended" value has been set to "D" indicating that the items are "Discouraged".<a href="#section-6-2" class="pilcrow">¶</a></p>
-<p id="section-6-3">IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For ffdhe2048, secp160k1, secp160r1, secp160r2, sect163k1, sect163r1, sect163r2, secp192k1, secp192r1, sect193r1, sect193r2, secp224k1, secp224r1, sect233k1, sect233r1, and sect239k1 the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6-3" class="pilcrow">¶</a></p>
-<p id="section-6-4">IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 the "Recommended" value has been set to "N". For rsa_pkcs1_sha1, ecdsa_sha1, rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and rsa_pkcs1_sha512_legacy the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6-4" class="pilcrow">¶</a></p>
+<div id="tls-pskkeyexchangemode">
+<section id="section-6.1">
+        <h3 id="name-tls-pskkeyexchangemode">
+<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-tls-pskkeyexchangemode" class="section-name selfRef">TLS PskKeyExchangeMode</a>
+        </h3>
+<p id="section-6.1-1">IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading'. For the following values the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6.1-1" class="pilcrow">¶</a></p>
+<table class="center" id="table-1">
+          <caption><a href="#table-1" class="selfRef">Table 1</a></caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Desctiption</th>
+              <th class="text-left" rowspan="1" colspan="1">Recommended</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">psk_ke</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+          </tbody>
+        </table>
+</section>
+</div>
+<div id="tls-supported-groups">
+<section id="section-6.2">
+        <h3 id="name-tls-supported-groups">
+<a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-tls-supported-groups" class="section-name selfRef">TLS Supported Groups</a>
+        </h3>
+<p id="section-6.2-1">IANA is requested to update the TLS Supported Groups registry under the Transport Layer Security (TLS) Parameters heading. For the following values the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6.2-1" class="pilcrow">¶</a></p>
+<table class="center" id="table-2">
+          <caption><a href="#table-2" class="selfRef">Table 2</a></caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Desctiption</th>
+              <th class="text-left" rowspan="1" colspan="1">Recommended</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">sect163k1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">sect163r1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">sect163r2</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">sect193r1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">sect193r2</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">sect233k1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">sect233r1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">sect239k1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">secp160k1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">secp160r1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">secp160r2</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">secp192k1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">secp192r1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">secp224k1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">secp224r1</td>
+              <td class="text-left" rowspan="1" colspan="1">D</td>
+            </tr>
+          </tbody>
+        </table>
+</section>
+</div>
+<div id="tls-signaturescheme">
+<section id="section-6.3">
+        <h3 id="name-tls-signaturescheme">
+<a href="#section-6.3" class="section-number selfRef">6.3. </a><a href="#name-tls-signaturescheme" class="section-name selfRef">TLS SignatureScheme</a>
+        </h3>
+<p id="section-6.3-1">IANA is requested to update the TLS Cipher Suites registry under the Transport Layer Security (TLS) Parameters heading. For TLS_SHA256_SHA256 and TLS_SHA384_SHA384 the "Recommended" value has been set to "D" indicating that the items are "Discouraged".<a href="#section-6.3-1" class="pilcrow">¶</a></p>
+<p id="section-6.3-2">IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 the "Recommended" value has been set to "N". For rsa_pkcs1_sha1, ecdsa_sha1, rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and rsa_pkcs1_sha512_legacy the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6.3-2" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <section id="section-7">

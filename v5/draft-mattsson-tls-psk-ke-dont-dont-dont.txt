@@ -88,6 +88,9 @@ Table of Contents
    4.  2048-bit Finite Field Diffie-Hellman
    5.  Signature Algorithms with PKCS #1 v1.5 Padding
    6.  IANA Considerations
+     6.1.  TLS PskKeyExchangeMode
+     6.2.  TLS Supported Groups
+     6.3.  TLS SignatureScheme
    7.  References
      7.1.  Normative References
      7.2.  Informative References
@@ -330,22 +333,70 @@ Table of Contents
 
 6.  IANA Considerations
 
+6.1.  TLS PskKeyExchangeMode
+
    IANA is requested to update the TLS PskKeyExchangeMode registry under
-   the Transport Layer Security (TLS) Parameters heading.  For psk_ke
-   the "Recommended" value has been set to "D" indicating that the item
-   is "Discouraged".
+   the Transport Layer Security (TLS) Parameters heading'.  For the
+   following values the the "Recommended" value has been set to "D"
+   indicating that the item is "Discouraged".
+
+                       +=============+=============+
+                       | Desctiption | Recommended |
+                       +=============+=============+
+                       | psk_ke      | D           |
+                       +-------------+-------------+
+
+                                  Table 1
+
+6.2.  TLS Supported Groups
+
+   IANA is requested to update the TLS Supported Groups registry under
+   the Transport Layer Security (TLS) Parameters heading.  For the
+   following values the the "Recommended" value has been set to "D"
+   indicating that the item is "Discouraged".
+
+                       +=============+=============+
+                       | Desctiption | Recommended |
+                       +=============+=============+
+                       | sect163k1   | D           |
+                       +-------------+-------------+
+                       | sect163r1   | D           |
+                       +-------------+-------------+
+                       | sect163r2   | D           |
+                       +-------------+-------------+
+                       | sect193r1   | D           |
+                       +-------------+-------------+
+                       | sect193r2   | D           |
+                       +-------------+-------------+
+                       | sect233k1   | D           |
+                       +-------------+-------------+
+                       | sect233r1   | D           |
+                       +-------------+-------------+
+                       | sect239k1   | D           |
+                       +-------------+-------------+
+                       | secp160k1   | D           |
+                       +-------------+-------------+
+                       | secp160r1   | D           |
+                       +-------------+-------------+
+                       | secp160r2   | D           |
+                       +-------------+-------------+
+                       | secp192k1   | D           |
+                       +-------------+-------------+
+                       | secp192r1   | D           |
+                       +-------------+-------------+
+                       | secp224k1   | D           |
+                       +-------------+-------------+
+                       | secp224r1   | D           |
+                       +-------------+-------------+
+
+                                  Table 2
+
+6.3.  TLS SignatureScheme
 
    IANA is requested to update the TLS Cipher Suites registry under the
    Transport Layer Security (TLS) Parameters heading.  For
    TLS_SHA256_SHA256 and TLS_SHA384_SHA384 the "Recommended" value has
    been set to "D" indicating that the items are "Discouraged".
-
-   IANA is requested to update the TLS Supported Groups registry under
-   the Transport Layer Security (TLS) Parameters heading.  For
-   ffdhe2048, secp160k1, secp160r1, secp160r2, sect163k1, sect163r1,
-   sect163r2, secp192k1, secp192r1, sect193r1, sect193r2, secp224k1,
-   secp224r1, sect233k1, sect233r1, and sect239k1 the "Recommended"
-   value has been set to "D" indicating that the item is "Discouraged".
 
    IANA is requested to update the TLS SignatureScheme registry under
    the Transport Layer Security (TLS) Parameters heading.  For
