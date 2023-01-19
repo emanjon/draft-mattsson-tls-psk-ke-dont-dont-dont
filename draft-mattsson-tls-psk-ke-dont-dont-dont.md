@@ -37,6 +37,7 @@ normative:
   RFC2119:
   RFC8174:
   RFC8446:
+  RFC9147:
   I-D.ietf-tls-rfc8447bis:
 
 informative:
