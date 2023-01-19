@@ -1442,10 +1442,9 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
       <h2 id="name-signature-algorithms-with-p">
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-signature-algorithms-with-p" class="section-name selfRef">Signature Algorithms with PKCS #1 v1.5 Padding or SHA-1</a>
       </h2>
-<p id="section-5-1">Recommendations regarding RSASSA-PKCS1-v1_5 in certificates varies. The RSA Cryptography Specifications <span>[<a href="#RFC8017" class="cite xref">RFC8017</a>]</span> specifies that "RSASSA-PSS is REQUIRED in new applications. RSASSA-PKCS1-v1_5 is included only for compatibility with existing applications.". BSI <span>[<a href="#BSI" class="cite xref">BSI</a>]</span> allows use of the PKCS #1 v1.5 padding scheme in certificates up to the year 2025. The Commercial National Security Algorithm (CNSA) <span>[<a href="#RFC9151" class="cite xref">RFC9151</a>]</span> requires offer of rsa_pkcs1_sha384. This document sets the Recommended value of rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 to "N".<a href="#section-5-1" class="pilcrow">¶</a></p>
-<p id="section-5-2"><span>[<a href="#RFC8446" class="cite xref">RFC8446</a>]</span> forbids the use of RSASSA-PKCS1-v1_5 in signed TLS handshake messages. <span>[<a href="#I-D.davidben-tls13-pkcs1" class="cite xref">I-D.davidben-tls13-pkcs1</a>]</span> registered new RSASSA-PKCS1-v1_5 Signature Algorithms for use in signed TLS 1.3 handshake messages. This document sets the Recommended value of rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and rsa_pkcs1_sha512_legacy to "D" indicating that they are "Discouraged".<a href="#section-5-2" class="pilcrow">¶</a></p>
-<p id="section-5-3"><span>[<a href="#RFC8446" class="cite xref">RFC8446</a>]</span> labels rsa_pkcs1_sha1 and ecdsa_sha1 in certificates as legacy algorithms which are being deprecated and that endpoints SHOULD NOT or in MUST NOT negotiate. This document sets the Recommended value of rsa_pkcs1_sha1 and ecdsa_sha1
-to "D" indicating that they are "Discouraged".<a href="#section-5-3" class="pilcrow">¶</a></p>
+<p id="section-5-1">Recommendations regarding RSASSA-PKCS1-v1_5 in certificates varies. The RSA Cryptography Specifications <span>[<a href="#RFC8017" class="cite xref">RFC8017</a>]</span> specifies that "RSASSA-PSS is REQUIRED in new applications. RSASSA-PKCS1-v1_5 is included only for compatibility with existing applications.". BSI <span>[<a href="#BSI" class="cite xref">BSI</a>]</span> allows use of the PKCS #1 v1.5 padding scheme in certificates up to the year 2025. The Commercial National Security Algorithm (CNSA) <span>[<a href="#RFC9151" class="cite xref">RFC9151</a>]</span> requires offer of rsa_pkcs1_sha384 in certificates. This document sets the Recommended value of rsa_pkcs1_sha256, rsa_pkcs1_sha384, and rsa_pkcs1_sha512 to "N".<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-5-2"><span>[<a href="#RFC8446" class="cite xref">RFC8446</a>]</span> forbids the use of RSASSA-PKCS1-v1_5 in signed TLS handshake messages. <span>[<a href="#I-D.davidben-tls13-pkcs1" class="cite xref">I-D.davidben-tls13-pkcs1</a>]</span> registered new RSASSA-PKCS1-v1_5 signature algorithms for use in signed TLS 1.3 handshake messages. This document sets the Recommended value of rsa_pkcs1_sha256_legacy, rsa_pkcs1_sha384_legacy, and rsa_pkcs1_sha512_legacy to "D" indicating that they are "Discouraged".<a href="#section-5-2" class="pilcrow">¶</a></p>
+<p id="section-5-3"><span>[<a href="#RFC8446" class="cite xref">RFC8446</a>]</span> labels rsa_pkcs1_sha1 and ecdsa_sha1 in certificates as legacy algorithms which are being deprecated and that endpoints SHOULD NOT or MUST NOT negotiate. This document sets the Recommended value of rsa_pkcs1_sha1 and ecdsa_sha1 to "D" indicating that they are "Discouraged".<a href="#section-5-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
@@ -1458,7 +1457,7 @@ to "D" indicating that they are "Discouraged".<a href="#section-5-3" class="pilc
         <h3 id="name-tls-pskkeyexchangemode">
 <a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-tls-pskkeyexchangemode" class="section-name selfRef">TLS PskKeyExchangeMode</a>
         </h3>
-<p id="section-6.1-1">IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading'. For the following entry the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6.1-1" class="pilcrow">¶</a></p>
+<p id="section-6.1-1">IANA is requested to update the TLS PskKeyExchangeMode registry under the Transport Layer Security (TLS) Parameters heading. For the following entry the the "Recommended" value has been set to "D" indicating that the item is "Discouraged".<a href="#section-6.1-1" class="pilcrow">¶</a></p>
 <span id="name-downgraded-tls-psk-key-exch"></span><table class="center" id="table-1">
           <caption>
 <a href="#table-1" class="selfRef">Table 1</a>:
@@ -1612,7 +1611,7 @@ to "D" indicating that they are "Discouraged".<a href="#section-5-3" class="pilc
         <h3 id="name-tls-signaturescheme">
 <a href="#section-6.4" class="section-number selfRef">6.4. </a><a href="#name-tls-signaturescheme" class="section-name selfRef">TLS SignatureScheme</a>
         </h3>
-<p id="section-6.4-1">IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the the "Recommended" value has been set to "D" indicating that the items are "Discouraged" or to "N".<a href="#section-6.4-1" class="pilcrow">¶</a></p>
+<p id="section-6.4-1">IANA is requested to update the TLS SignatureScheme registry under the Transport Layer Security (TLS) Parameters heading. For the following entries the "Recommended" value has been set to "N" or "D" where "D" indicates that the items are "Discouraged".<a href="#section-6.4-1" class="pilcrow">¶</a></p>
 <span id="name-downgraded-tls-signature-sc"></span><table class="center" id="table-4">
           <caption>
 <a href="#table-4" class="selfRef">Table 4</a>:
