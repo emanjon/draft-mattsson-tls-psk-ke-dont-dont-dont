@@ -4,8 +4,8 @@
 
 Transport Layer Security                               J. Preuß Mattsson
 Internet-Draft                                                  Ericsson
-Intended status: Standards Track                         16 January 2023
-Expires: 20 July 2023
+Intended status: Standards Track                         19 January 2023
+Expires: 23 July 2023
 
 
 NULL Encryption and Key Exchange Without Forward Secrecy are Dicouraged
@@ -63,7 +63,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 July 2023.
+   This Internet-Draft will expire on 23 July 2023.
 
 Copyright Notice
 
@@ -373,6 +373,11 @@ Table of Contents
    [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
               Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
               <https://www.rfc-editor.org/rfc/rfc8446>.
+
+   [RFC9147]  Rescorla, E., Tschofenig, H., and N. Modadugu, "The
+              Datagram Transport Layer Security (DTLS) Protocol Version
+              1.3", RFC 9147, DOI 10.17487/RFC9147, April 2022,
+              <https://www.rfc-editor.org/rfc/rfc9147>.
 
 7.2.  Informative References
 
