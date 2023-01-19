@@ -1155,7 +1155,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-cipher-suites-with-null-enc" class="internal xref">Cipher Suites with NULL Encryption</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-2048-bit-finite-field-diffi" class="internal xref">2048-bit Finite Field Diffie-Hellman</a></p>
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-diffie-hellman-groups-with-" class="internal xref">Diffie-Hellman Groups with Less than 128-bit Security</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
             <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-signature-algorithms-with-p" class="internal xref">Signature Algorithms with PKCS #1 v1.5 Padding or SHA-1</a></p>
@@ -1425,15 +1425,16 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 <li class="normal" id="section-3-4.1">"The entire enterprise private network is not considered an implicit trust zone. Assets should always act as if an attacker is present on the enterprise network, and communication should be done in the most secure manner available. This entails actions such as authenticating all connections and encrypting all traffic."<a href="#section-3-4.1" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="section-3-5">This document sets the Recommended value of TLS_SHA256_SHA256 and TLS_SHA384_SHA384 to "D" indicating discouraged.<a href="#section-3-5" class="pilcrow">¶</a></p>
+<p id="section-3-5">This document sets the Recommended value of TLS_SHA256_SHA256 and TLS_SHA384_SHA384 to "D" indicating that they are discouraged.<a href="#section-3-5" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="bit-finite-field-diffie-hellman">
+<div id="diffie-hellman-groups-with-less-than-128-bit-security">
 <section id="section-4">
-      <h2 id="name-2048-bit-finite-field-diffi">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-2048-bit-finite-field-diffi" class="section-name selfRef">2048-bit Finite Field Diffie-Hellman</a>
+      <h2 id="name-diffie-hellman-groups-with-">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-diffie-hellman-groups-with-" class="section-name selfRef">Diffie-Hellman Groups with Less than 128-bit Security</a>
       </h2>
-<p id="section-4-1">Government organizations like NIST, ANSSI, BSI, and NSA have already produced recommendations regarding the deprecation of ffdhe2048. NIST <span>[<a href="#NIST-Lifetime" class="cite xref">NIST-Lifetime</a>]</span> and ANSSI <span>[<a href="#ANSSI-TLS" class="cite xref">ANSSI-TLS</a>]</span> only allow 2048-bit Finite Field Diffie-Hellman if the application data does not have to be protected after 2030. If the application data had a security life of ten years, NIST and ANSSI allowed use of ffdhe2048 until December 31, 2020. BSI <span>[<a href="#BSI" class="cite xref">BSI</a>]</span> allowed use of ffdhe2048 up to the year 2022. The Commercial National Security Algorithm Suite (CNSA) <span>[<a href="#RFC9151" class="cite xref">RFC9151</a>]</span> forbids the use of ffdhe2048. This document sets the Recommended value of ffdhe2048 to "D" indicating discouraged.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-1">Government organizations like NIST, ANSSI, BSI, and NSA have already produced recommendations regarding the deprecation of ffdhe2048. NIST <span>[<a href="#NIST-Lifetime" class="cite xref">NIST-Lifetime</a>]</span> and ANSSI <span>[<a href="#ANSSI-TLS" class="cite xref">ANSSI-TLS</a>]</span> only allow 2048-bit Finite Field Diffie-Hellman if the application data does not have to be protected after 2030. If the application data had a security life of ten years, NIST and ANSSI allowed use of ffdhe2048 until December 31, 2020. BSI <span>[<a href="#BSI" class="cite xref">BSI</a>]</span> allowed use of ffdhe2048 up to the year 2022. The Commercial National Security Algorithm Suite (CNSA) <span>[<a href="#RFC9151" class="cite xref">RFC9151</a>]</span> forbids the use of ffdhe2048. This document sets the Recommended value of ffdhe2048 to "D" indicating that it is discouraged.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">This document sets the Recommended value of secp160k1, secp160r1, secp160r2, sect163k1, sect163r1, sect163r2, secp192k1, secp192r1, sect193r1, sect193r2, secp224k1, secp224r1m sect233k1, sect233r1, and sect239k1 to "D" indicating that they are discouraged.<a href="#section-4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="signature-algorithms-with-pkcs-1-v15-padding-or-sha-1">

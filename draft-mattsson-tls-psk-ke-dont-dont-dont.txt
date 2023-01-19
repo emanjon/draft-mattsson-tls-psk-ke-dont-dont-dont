@@ -85,7 +85,7 @@ Table of Contents
      1.1.  Terminology
    2.  Key Exchange Without Forward Secrecy
    3.  Cipher Suites with NULL Encryption
-   4.  2048-bit Finite Field Diffie-Hellman
+   4.  Diffie-Hellman Groups with Less than 128-bit Security
    5.  Signature Algorithms with PKCS #1 v1.5 Padding or SHA-1
    6.  IANA Considerations
      6.1.  TLS PskKeyExchangeMode
@@ -305,9 +305,9 @@ Table of Contents
       traffic."
 
    This document sets the Recommended value of TLS_SHA256_SHA256 and
-   TLS_SHA384_SHA384 to "D" indicating discouraged.
+   TLS_SHA384_SHA384 to "D" indicating that they are discouraged.
 
-4.  2048-bit Finite Field Diffie-Hellman
+4.  Diffie-Hellman Groups with Less than 128-bit Security
 
    Government organizations like NIST, ANSSI, BSI, and NSA have already
    produced recommendations regarding the deprecation of ffdhe2048.
@@ -318,7 +318,12 @@ Table of Contents
    2020.  BSI [BSI] allowed use of ffdhe2048 up to the year 2022.  The
    Commercial National Security Algorithm Suite (CNSA) [RFC9151] forbids
    the use of ffdhe2048.  This document sets the Recommended value of
-   ffdhe2048 to "D" indicating discouraged.
+   ffdhe2048 to "D" indicating that it is discouraged.
+
+   This document sets the Recommended value of secp160k1, secp160r1,
+   secp160r2, sect163k1, sect163r1, sect163r2, secp192k1, secp192r1,
+   sect193r1, sect193r2, secp224k1, secp224r1m sect233k1, sect233r1, and
+   sect239k1 to "D" indicating that they are discouraged.
 
 5.  Signature Algorithms with PKCS #1 v1.5 Padding or SHA-1
 
