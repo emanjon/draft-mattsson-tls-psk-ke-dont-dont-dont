@@ -2,7 +2,8 @@
 
 This is the working area for the individual Internet-Draft, "NULL Encryption and Key Exchange Without Forward Secrecy are Dicouraged".
 
-* [Editor's Copy](https://emanjon.github.io/draft-mattsson-tls-psk-ke-dont-dont-dont/#go.draft-mattsson-tls-psk-ke-dont-dont-dont.html)
+* [Editor's Copy HTML](https://emanjon.github.io/draft-mattsson-tls-psk-ke-dont-dont-dont/#go.draft-mattsson-tls-psk-ke-dont-dont-dont.html)
+* [Editor's Copy Text](https://emanjon.github.io/draft-mattsson-tls-psk-ke-dont-dont-dont/#go.draft-mattsson-tls-psk-ke-dont-dont-dont.txt)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-mattsson-tls-psk-ke-dont-dont-dont)
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-mattsson-tls-psk-ke-dont-dont-dont)
 * [Compare Editor's Copy to Individual Draft](https://emanjon.github.io/draft-mattsson-tls-psk-ke-dont-dont-dont/#go.draft-mattsson-tls-psk-ke-dont-dont-dont.diff)
